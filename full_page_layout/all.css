@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+a {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+  color: var(--main-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1260px;
+  height: auto;
+}
+
+.nav {
+  position: sticky;
+  top: 0px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background: var(--main-red);
+  padding: 0 1.5rem;
+  font-size: 1.32rem;
+}
+.navbar-list {
+  display: block;
+  padding: 1.5rem 1.2rem;
+}
+.navbar-list:hover {
+  background: var(--main-blue);
+}
+
+.header {
+  background: var(--main-gray);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header h1 {
+  font-size: 3.6rem;
+  font-family: "Raleway", sans-serif;
+}
+.header h1 + p {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 200;
+  color: var(--main-red);
+}
+
+.projects {
+  background: var(--main-blue);
+}
+.projects-title {
+  border-bottom: 2px solid var(--main-white);
+  font-size: 2.5rem;
+  padding: 0 2.5rem 0.5rem 2.5rem;
+}
+.projects-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 1090px) {
+  .projects-card {
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .projects-card {
+    padding: 0 2rem;
+  }
+}
+.projects-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0;
+}
+.projects-btn {
+  background: var(--main-gray);
+  padding: 0.5rem 1.2rem;
+  margin-top: 4rem;
+  border: none;
+  transition: all 0.3s ease-out;
+  font-size: 1.2rem;
+}
+.projects-btn:hover {
+  background: var(--main-red);
+}
+.projects-btn:hover i {
+  position: relative;
+  transform: translateX(1px);
+}
+.projects-btn i {
+  transition: all 0.3s ease-out;
+  margin-left: 10px;
+}
+
+.card {
+  width: 30%;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 4rem;
+}
+@media (max-width: 1090px) {
+  .card {
+    width: 45%;
+    margin-top: 3rem;
+  }
+  .card:nth-child(odd) {
+    margin-right: 4rem;
+  }
+}
+@media (max-width: 767px) {
+  .card {
+    width: 100%;
+  }
+  .card:nth-child(odd) {
+    margin-right: 0;
+  }
+}
+.card img {
+  width: 100%;
+}
+.card-footer {
+  background: var(--main-gray);
+  padding: 1rem 0;
+}
+.card-footer span:nth-child(odd) {
+  color: var(--main-gray);
+  transition: all 0.3s ease-out;
+}
+.card:hover .card-footer span:nth-child(odd) {
+  color: #ff7f50;
+}
+
+.profile {
+  background: var(--main-gray);
+}
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.profile-main h2 {
+  font-size: 3.6rem;
+  font-family: "Raleway", sans-serif;
+}
+.profile-main > p {
+  font-style: italic;
+  font-weight: 200;
+  margin-bottom: 4rem;
+}
+.profile-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+}
+.profile-link li i {
+  margin-right: 4px;
+}
+.profile-link li {
+  transition: all 0.3s ease-out;
+}
+.profile-link li:hover {
+  transform: translateY(10px);
+}
+
+.footer {
+  background: var(--main-gray);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border-top: 4px solid var(--main-red);
+}/*# sourceMappingURL=all.css.map */
