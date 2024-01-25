@@ -5,7 +5,7 @@
 |----|-----------------------------------------|--------------|
 | 01 | 透過建構貓咪照片 APP 學習 HTML            | [cat_photo_app]( https://selena60635.github.io/m3-week-02-selena60635/cat_photo_app/) |
 | 02 | 透過製作一個咖啡目錄，來學習 CSS           | [cafe_menu]( https://selena60635.github.io/m3-week-02-selena60635/cafe_menu/) |
-| 03 | 透過一個註冊表單，學習 HTML Form (表單)    | [registrantion_form]( https://selena60635.github.io/m3-week-02-selena60635/registrantion_form/) |
+| 03 | 透過一個註冊表單，學習 HTML Form (表單)    | [registration_form]( https://selena60635.github.io/m3-week-02-selena60635/registration_form/) |
 | 04 | 透過建立一幅 Rothko 畫作學習 CSS 盒子模型 | [rothko_painting]( https://selena60635.github.io/m3-week-02-selena60635/rothko_painting/) |
 | 05 | 透過建立一個相片藝廊學習 CSS Flexbox      | [photo_gallery]( https://selena60635.github.io/m3-week-02-selena60635/photo_gallery/) |
 | 06 | 通過構建摩天輪來學習 CSS 動畫             | [ferris_wheel]( https://selena60635.github.io/m3-week-02-selena60635/ferris_wheel/) |
