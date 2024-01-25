@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+
+@import "./reset";
+@import "./variable";
+@import "./mixin";
+
+//basic
+* {
+  list-style: none;
+  text-decoration: none;
+  color: $light;
+  //   outline: 1px solid rgb(0, 166, 255);
+}
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  background: #b0c0bc;
+}
+a {
+  display: block;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  @include phone {
+    font-size: 2rem;
+  }
+}
+button {
+  outline: none;
+  border: none;
+  padding: 0;
+}
+///////////////
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 1em;
+  @include pad {
+    max-width: 960px;
+  }
+  //   @include phone {
+  //     max-width: 768px;
+  //   }
+}
+
+//nav
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1.5em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  @include phone {
+    padding: 0.5em;
+  }
+  &-control:checked ~ *.nav {
+    left: -500px;
+  }
+  &-icon,
+  &-control {
+    display: none;
+    @include pad {
+      display: block;
+    }
+  }
+  &-control {
+    position: absolute;
+    z-index: -2;
+    opacity: 0;
+  }
+  &-icon {
+    padding: 10px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      background: $secondary;
+    }
+    div {
+      width: 50px;
+      height: 4px;
+      background: $light;
+      border-radius: 2px;
+      &:nth-child(1) {
+        margin-bottom: 10px;
+      }
+      &:nth-child(3) {
+        margin-top: 10px;
+      }
+      @include phone {
+        width: 25px;
+        height: 2px;
+        &:nth-child(1) {
+          margin-bottom: 5px;
+        }
+        &:nth-child(3) {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  transition: all 0.5s ease;
+  @include pad {
+    position: absolute;
+    top: 79px;
+    left: 0;
+    z-index: 0;
+    flex-direction: column;
+    width: 40%;
+    height: 100vh;
+  }
+  @include phone {
+    width: 60%;
+  }
+  &-list {
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    &:hover {
+      background: $secondary;
+    }
+  }
+  li:not(:last-child) {
+    margin-right: 1em;
+    @include phone {
+      margin: 0.5em;
+    }
+  }
+  li {
+    @include pad {
+      padding: 1em 0;
+      margin: 1em;
+      border-bottom: 1px solid $light;
+    }
+    @include phone {
+      margin: 0.5em;
+    }
+  }
+}
+
+.header {
+  background: url("https://www.popdaily.com.tw/shaper/u/202401/e4284f17-8c13-49fd-87ac-10959073a71f.jpg?resize-w=1100&resize-h=572")
+    no-repeat 30% / cover;
+  padding: 10em 0;
+  @include phone {
+    padding: 6em 0;
+  }
+}
+
+.live {
+  padding: 4em 1em 2em 1em;
+  @include phone {
+    padding: 2.5em 1.5em 1.5em 1.5em;
+  }
+  &-title {
+    padding: 0.2em 0.5em;
+    margin-bottom: 1em;
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+    @include phone {
+      gap: 1.5em;
+    }
+  }
+}
+.event {
+  padding: 2em 1em;
+  @include phone {
+    padding: 1.5em;
+  }
+  &-title {
+    padding: 0.2em 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    @include phone {
+      justify-content: center;
+      & > button {
+        width: 50%;
+      }
+    }
+
+    & > a {
+      width: 70%;
+      @include phone {
+        width: 100%;
+        margin-bottom: 2em;
+      }
+      img {
+        transition: all 0.5s ease;
+      }
+      &:hover img {
+        transform: scale(1.1);
+      }
+      & > div {
+        overflow: hidden;
+      }
+    }
+  }
+}
+.btn {
+  &-more {
+    padding: 1em;
+    transition: all 0.2s ease;
+    @include phone {
+      padding: 0.5em;
+    }
+    &:hover {
+      color: $light;
+      background: $secondary;
+    }
+  }
+}
+.entertain {
+  padding: 4em 1em 6em 1em;
+  @include phone {
+    padding: 1.5em 1.5em 4em 1.5em;
+  }
+  &-title {
+    padding: 0.2em 0.5em;
+    margin-bottom: 1em;
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+    @include phone {
+      gap: 2.5em;
+    }
+  }
+}
+.card {
+  width: 0;
+  flex-grow: 1;
+  @include phone {
+    width: 100%;
+  }
+  a {
+    &:hover .card-img {
+      transform: scale(1.1);
+    }
+  }
+  &-head {
+    overflow: hidden;
+  }
+  &-img {
+    transition: all 0.5s ease;
+    width: 100%;
+  }
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1.5em;
+  position: relative;
+  z-index: 2;
+  @include phone {
+    justify-content: center;
+  }
+  &-logo {
+    background: url("./img/我.png") no-repeat right 0 bottom 10% / cover;
+    width: 300px;
+    height: 60px;
+    @include phone {
+      display: none;
+    }
+  }
+}
+
+///
+.fs {
+  &-1 {
+    font-size: 1.5rem;
+    @include phone {
+      font-size: 1rem;
+    }
+  }
+  &-2 {
+    font-size: 2rem;
+    @include phone {
+      font-size: 1.5rem;
+    }
+  }
+}
+.fw {
+  &-500 {
+    font-weight: 500;
+  }
+  &-600 {
+    font-weight: 500;
+  }
+  &-900 {
+    font-weight: 900;
+  }
+}
+.bg {
+  &-primary {
+    background: $primary;
+  }
+}
+.text {
+  &-sec {
+    color: $secondary;
+  }
+}
+.border {
+  border: 3px solid $secondary;
+  &-bottom {
+    border-bottom: 3px solid $secondary;
+  }
+  &-radius {
+    border-radius: 10px;
+    &-m {
+      border-radius: 30px;
+    }
+  }
+}
+
+.hiddenH1 {
+  background: url("./img/我.png") no-repeat center/cover;
+  width: 300px;
+  height: 60px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  float: left;
+  @include phone {
+    width: 50px;
+  }
+}
